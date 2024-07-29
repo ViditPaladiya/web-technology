@@ -3,72 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me - Paladiya Vidit</title>
+  <title>About Me</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2; /* Light gray background */
+      color: #333;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
     }
-
-    h1, h2, h3 {
-      color: #2D4059; /* Dark blue for headings */
-      font-weight: bold;/*helo*/
-    }
-/*hello*/
-    .about-me {
-      
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0 auto;
+    .container {
       width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+    header {
+      
+      text-align: center;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 75px;
+      display: block;
+      margin: 0 auto;
+    }
+    h1, h2 {
+      color: #444;
+    }
+    .details, .favorites {
+      background: #fff;
       padding: 20px;
-      border: 1px solid #ddd; /* Light border */
-      border-radius: 5px; /* Rounded corners */
-      background-color: #fff; /* White background for content */
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .details {
+      color: #555;
     }
 
-    .profile-image {
-      width: 200px;
-      border-radius: 50%;
-      margin-right: 20px;
-    }
 
-    .description {
-      margin-bottom: 15px;
-      color: #666; /* Lighter gray for text */
+    
+    
+    .highlight-color {
+      color: #FF5722; 
     }
-
-    .current-courses,
-    .favorites {
-      margin-top: 20px;
+    .highlight-background {
+      background-color: #FFC107; 
     }
-
-    .favorites table {
-      width: 100%;
-      border-collapse: collapse;/* this is game of heart*/
+    .movie-img {
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+      margin-right: 10px;
     }
-
-    .favorites th,
-    .favorites td {
-      padding: 5px;
-      border: 1px solid #ddd;
-    }
-
-    .favorites th {
-      text-align: left;
-      background-color: #eee; /* Light gray for table headers */
-    }
-
-    /* Add colors for specific sections (optional): */
-    .current-courses {
-      border-left: 5px solid #4CAF50; /* Green for current courses */
-      padding-left: 10px; /* Add space after the border */
-    }
-
-    .favorites {
-      border-left: 5px solid #FF9800; /* Orange for favorites */
-      padding-left: 10px;
+    .movie-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -76,49 +68,81 @@
   <header>
     <h1>About Me</h1>
   </header>
+  <div class="container">
+    <img src="IMG_20231015_194516.jpg" alt="Profile Picture" class="profile-img">
+    <br>
+    <br>
+    <div class="details">
+      <h2>Name: Vidit Paladiya</h2>
+      <p>Roll No: 22BCP4</p>
+      <p>Description: I am a passionate student with a interest in Salesforce Developement . I enjoy learning new technologies and working on projects.</p>
+      <div class="subjects">
+        <h2>Current Semester Subjects:</h2>
+        <ul>
+          <li class="highlight-color">Computer Network</li>
+          <li class="highlight-color">System Software & Compiler Design</li>
+          <li class="highlight-color">Software Engineering</li>
+          <li class="highlight-color">Information Security</li>
+          <li class="highlight-color">Introduction to Web Technology LAB</li>
+        </ul>
+      </div>
+    </div>
 
-  <main>
-    <section class="about-me">
-      <img src="IMG_20231015_194516.jpg" alt="Vidit's Photo" class="profile-image">
-      <h2>Paladiya Vidit - 22BCP483D</h2>
-      <p class="description">**Description:** (Add a concise and engaging description of yourself, your interests, and goals.)</p>
+    <div class="favorites">
+      <h2>Favorite Movies:</h2>
+      <ul>
 
-      <h3> Semester Courses</h3>
-      <ul class="current-courses">
-        <li>(Course 1 Name) - (Professor's Name)</li>
-        <li>(Course 2 Name) - (Professor's Name)</li>
+        <li class="movie-item">
+          <a href="https://www.youtube.com/watch?v=8ugaeA-nMTc" target="_blank">
+            <img src="b.png" alt="Ironman" class="movie-img">
+          </a>
+        Ironman                </li>
+        <li class="movie-item">
+          <a href="https://www.metacritic.com/movie/aladdin-2019/" target="_blank">
+            <img src="c.jpg" alt="The Shawshank Redemption" class="movie-img">
+          </a>
+          Aladdin 
+        </li>
+
+
+        <li class="movie-item">
+          <a href="https://www.google.com/search?q=Inception" target="_blank">
+            <img src="a.jpg" alt="Inception" class="movie-img">
+          </a>
+          Inception
+        </li>
       </ul>
+      <h2>Favorite TV Shows:</h2>
+      <ul>
 
-      <h3>Favorites</h3>
-      <table class="favorites">
-        <tr>
-          <th>Movies</th>
-          <th>TV Shows</th>
-          <th>Books</th>
-        </tr>
-        <tr>
-          <td>
-            <ul>
-              <li>(Movie 1 Title)</li>
-              <li>(Movie 2 Title)</li>
-              <li>(Movie 3 Title)</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>(TV Show 1 Title)</li>
-              <li>(TV Show 2 Title)</li>
-              <li>(TV Show 3 Title)</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>(Book 1 Title) by (Author's Name)</li>
-              <li>(Book 2 Title) by (Author's Name)</li>
-              <li>(Book 3 Title) by (Author's Name)</li>
-            </ul>
-          </td>
-        </tr>
-      </table>
+        <li class="movie-item">
+          <a href="https://www.imdb.com/title/tt0108778/" target="_blank">
+            <img src="f.jpg" alt="Ironman" class="movie-img">
+          </a>
+        Friends                </li>
+        <li class="movie-item">
+          <a href="https://www.news18.com/entertainment/television/tmkoc-cast-celebrates-15-years-of-the-show-thanks-producer-asit-modi-amid-sexual-harassment-case-by-former-cast-8455147.html" target="_blank">
+            <img src="e.png" alt="The Shawshank Redemption" class="movie-img">
+          </a>
+        Taarak Mehta Ka Ooltah Chashmah
 
-    </section>
+        </li>
+
+
+        <li class="movie-item">
+          <a href="https://www.imdb.com/title/tt7768502/?ref_=nv_sr_srsg_4_tt_8_nm_0_in_0_q_shin%2520chain" target="_blank">
+            <img src="d.png" alt="Inception" class="movie-img">
+          </a>
+          Shin-chan
+        </li>
+      </ul>
+      <h2>Favorite Books:</h2>
+      <ul>
+        <li>Mahabharata</li>
+        <li>Rich Dad Poor Dad</li>
+        <li>How to Win Friends and Influence People</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
